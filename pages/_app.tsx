@@ -1,10 +1,10 @@
 import * as React from "react"
 import type { AppProps } from "next/app"
 import { Inter } from "next/font/google"
+import { Toaster } from "sonner"
 
 import classNames from "utils/classNames"
-
-import { Toaster } from "sonner"
+import FileContextProvider from "context/FileContext"
 
 import "../styles/main.css"
 
@@ -17,13 +17,10 @@ const App: React.FC<AppProps> = (props) => {
   const { Component, pageProps } = props
 
   return (
-    <main
-      className={classNames(
-        inter.variable,
-        "overflow-x-hidden bg-zinc-900 font-sans"
-      )}
-    >
-      <Component {...pageProps} />
+    <main className={classNames(inter.variable)}>
+      <FileContextProvider>
+        <Component {...pageProps} />
+      </FileContextProvider>
       <Toaster />
     </main>
   )
