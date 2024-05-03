@@ -1,16 +1,5 @@
 import * as React from "react"
 
-import { Inter } from "next/font/google"
-
-import classNames from "utils/classNames"
-
-import "../styles/main.css"
-
-const inter = Inter({
-  variable: "--inter-font",
-  subsets: ["latin"],
-})
-
 import { Html, Head, Main, NextScript } from "next/document"
 
 const MyDocument: React.FC = () => {
@@ -25,12 +14,7 @@ const MyDocument: React.FC = () => {
           src="https://plausible.io/js/script.js"
         />
       </Head>
-      <body
-        className={classNames(
-          inter.variable,
-          "overflow-x-hidden bg-zinc-900 font-sans"
-        )}
-      >
+      <body>
         <Main />
         <NextScript />
       </body>
