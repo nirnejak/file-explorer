@@ -10,11 +10,11 @@ const MyDocument: React.FC = () => {
         {/* Plausible Analytics */}
         <script
           defer
-          data-domain="file-explorer"
+          data-domain="drive-explorer.vercel.app"
           src="https://plausible.io/js/script.js"
         />
       </Head>
-      <body>
+      <body className="overflow-x-hidden bg-zinc-900 font-sans">
         <Main />
         <NextScript />
       </body>
