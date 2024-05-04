@@ -4,7 +4,7 @@ import { Inter } from "next/font/google"
 import { Toaster } from "sonner"
 
 import classNames from "utils/classNames"
-import FileContextProvider from "context/FileContext"
+// import FileContextProvider from "context/FileContext"
 
 import "../styles/main.css"
 
@@ -18,9 +18,9 @@ const App: React.FC<AppProps> = (props) => {
 
   return (
     <main className={classNames(inter.variable)}>
-      <FileContextProvider>
-        <Component {...pageProps} />
-      </FileContextProvider>
+      {/* <FileContextProvider> */}
+      <Component {...pageProps} />
+      {/* </FileContextProvider> */}
       <Toaster />
     </main>
   )
